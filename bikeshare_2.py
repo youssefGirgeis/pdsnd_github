@@ -211,10 +211,10 @@ def view_data(df):
     """
     View sample of the raw data in the daraframe
     """
-    while True:
+    while True: 
         show = input('would you like to view individual trip? "yes" or "no"\n') # if user wants to view raw data
         if show.lower() == 'yes':
-            print(df.sample(5).to_string())
+            print(df.sample(5).to_string()) # display 5 random rows from the dataframe
         else:
             break
 
