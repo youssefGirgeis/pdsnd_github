@@ -28,10 +28,10 @@ def get_filters():
             city = city.replace(' ', '_') # for new york city's case 
             break
     
-    choices = ['month', 'day', 'both', 'none'] # list of filters 
+    filters = ['month', 'day', 'both', 'none'] # list of filters 
     while True:
         choice = input('Would like to filter the date by "month", "day", "both", or not at all? Type "none" for no time filter\n')
-        if choice.lower() not in choices: #check if the filter entered by the user in list of filers above
+        if choice.lower() not in filters: #check if the filter entered by the user in list of filers above
             print('Please enter the correct filter name (month, day, both, none)')
         else:
             break 
@@ -70,8 +70,7 @@ def check_month():
         month = input('Which month? January, February, March, April, May, or June?\n')
         if month.lower() not in months:
             print('Please enter the correct month name (January, February, March, April, May, or June)')
-        else:
-            break
+        break
     return month
 
 def check_day():
@@ -87,8 +86,7 @@ def check_day():
         day = input('which day? monday, tuesday, wednesday, thursday, friday, saturday, sunday\n')
         if day.lower() not in days:
             print('Please enter the correct day (monday, tuesday, wednesday, thursday, friday, saturday, sunday)')
-        else:
-            break
+        break
     return day 
 
 def load_data(city, month, day):
@@ -215,8 +213,7 @@ def view_data(df):
         show = input('would you like to view individual trip? "yes" or "no"\n') # if user wants to view raw data
         if show.lower() == 'yes':
             print(df.sample(5).to_string()) # display 5 random rows from the dataframe
-        else:
-            break
+        break
 
 def main():
     while True:
