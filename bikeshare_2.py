@@ -70,8 +70,7 @@ def check_month():
         month = input('Which month? January, February, March, April, May, or June?\n')
         if month.lower() not in months:
             print('Please enter the correct month name (January, February, March, April, May, or June)')
-        else:
-            break
+        break
     return month
 
 def check_day():
@@ -87,8 +86,7 @@ def check_day():
         day = input('which day? monday, tuesday, wednesday, thursday, friday, saturday, sunday\n')
         if day.lower() not in days:
             print('Please enter the correct day (monday, tuesday, wednesday, thursday, friday, saturday, sunday)')
-        else:
-            break
+        break
     return day 
 
 def load_data(city, month, day):
@@ -215,8 +213,7 @@ def view_data(df):
         show = input('would you like to view individual trip? "yes" or "no"\n') # if user wants to view raw data
         if show.lower() == 'yes':
             print(df.sample(5).to_string())
-        else:
-            break
+        break
 
 def main():
     while True:
