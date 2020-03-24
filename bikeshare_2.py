@@ -28,10 +28,10 @@ def get_filters():
             city = city.replace(' ', '_') # for new york city's case 
             break
     
-    choices = ['month', 'day', 'both', 'none'] # list of filters 
+    filters = ['month', 'day', 'both', 'none'] # list of filters 
     while True:
         choice = input('Would like to filter the date by "month", "day", "both", or not at all? Type "none" for no time filter\n')
-        if choice.lower() not in choices: #check if the filter entered by the user in list of filers above
+        if choice.lower() not in filters: #check if the filter entered by the user in list of filers above
             print('Please enter the correct filter name (month, day, both, none)')
         else:
             break 
