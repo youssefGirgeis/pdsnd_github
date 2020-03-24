@@ -220,12 +220,12 @@ def view_data(df):
 
 def main():
     while True:
-        city, month, day = get_filters()
-        df = load_data(city, month, day)
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
-        user_stats(df)
+        city, month, day = get_filters() # get city, month, day
+        df = load_data(city, month, day) # load dataframe
+        time_stats(df) # calaculate time stats
+        station_stats(df) # calculate stations stats
+        trip_duration_stats(df) #calculate trip duaration 
+        user_stats(df) #calculate user stats
 
         view_data(df) 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
